@@ -10,7 +10,7 @@ metadata:
 #  version: "1.18"
 vpc:
   id: "vpc-0bf2cde5281d163e4"  # Altere o VPC ID para a VPC que está criada no seu ambiente.
-  cidr: "10.13.0.0/16"       # Altera para o CIRD da VPC que está criada.
+  cidr: "10.x.x.x/16"       # Altera para o CIRD da VPC que está criada.
   subnets:
     private:
       us-east-1a:
