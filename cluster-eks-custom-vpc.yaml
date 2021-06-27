@@ -9,20 +9,20 @@ metadata:
   region: us-east-1 # ${AWS_REGION} 
 #  version: "1.18"
 vpc:
-  id: "vpc-0bf2cde5281d163e4"  # Altere o VPC ID para a VPC que está criada no seu ambiente.
+  id: "vpc-xxxxxxxxxxx"  # Altere o VPC ID para a VPC que está criada no seu ambiente.
   cidr: "10.x.x.x/16"       # Altera para o CIRD da VPC que está criada.
   subnets:
     private:
       us-east-1a:
-        id: "subnet-0f4bd11eb007cc0b6" # (Especifique o Subnet ID da da primeira Subnet privada)
+        id: "subnet-xxxxxxxxxx" # (Especifique o Subnet ID da da primeira Subnet privada)
       us-east-1b:
-        id: "subnet-04eda4a47872bf901" # (Especifique o Subnet ID da da segunda Subnet privada)
+        id: "subnet-xxxxxxxxxx" # (Especifique o Subnet ID da da segunda Subnet privada)
     # Subnets Publicas
     public:
       us-east-1a: 
-        id: "subnet-0db7f830375fcabcf" # (Especifique o Subnet ID da da primeira Subnet publica)
+        id: "subnet-xxxxxxxxxxx" # (Especifique o Subnet ID da da primeira Subnet publica)
       us-east-1b:
-        id: "subnet-056b010f87eab88d1" # (Especifique o Subnet ID da da segunda Subnet publica)
+        id: "subnet-xxxxxxxxxxx" # (Especifique o Subnet ID da da segunda Subnet publica)
 managedNodeGroups:
   # Nodegroup redes privadas
   - name: ng-private
@@ -32,8 +32,8 @@ managedNodeGroups:
     maxSize: 4
     privateNetworking: true
     subnets:
-      - subnet-0f4bd11eb007cc0b6 # (Especifique o Subnet ID da da primeira Subnet privada)
-      - subnet-04eda4a47872bf901 # (Especifique o Subnet ID da da segunda Subnet privada)
+      - subnet-xxxxxxxxxxxxxxxxx # (Especifique o Subnet ID da da primeira Subnet privada)
+      - subnet-xxxxxxxxxxxxxxxxx # (Especifique o Subnet ID da da segunda Subnet privada)
   # Nodegroup redes publicas
   - name: ng-public
     instanceType: t3.small
@@ -41,8 +41,8 @@ managedNodeGroups:
     minSize: 2
     maxSize: 4
     subnets:
-      - subnet-0db7f830375fcabcf # (Especifique o Subnet ID da da primeira Subnet publica)
-      - subnet-056b010f87eab88d1 # (Especifique o Subnet ID da da segunda Subnet publica)
+      - subnet-xxxxxxxxxxxxxxxxx # (Especifique o Subnet ID da da primeira Subnet publica)
+      - subnet-xxxxxxxxxxxxxxxxx # (Especifique o Subnet ID da da segunda Subnet publica)
     ssh:
       enableSsm: true
     iam:
